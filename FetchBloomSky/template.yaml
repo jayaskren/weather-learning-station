@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  FetchBloomsky:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: BloomskyPython/lambda_function.lambda_handler
+      Runtime: python3.6
+      Description: ''
+      MemorySize: 256
+      Timeout: 15
+      Role: >-
+        arn:aws:iam::764042028538:role/cloud9-fetchBloomSkyData-fetchBloomSkyDataRole-HT98HK2QJ1KF
+      CodeUri: .debug/
